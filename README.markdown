@@ -1,3 +1,6 @@
+Wish List application
+copyright 2012 Clay Yearsley all rights reserved
+
 == Welcome to Rails
 
 Rails is a web-application framework that includes everything needed to create
