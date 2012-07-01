@@ -1,0 +1,57 @@
+<%= form_for(@group) do |f| %>
+  <% if @group.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@group.errors.count, "error") %> prohibited this group from being saved:</h2>
+
+      <ul>
+      <% @group.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :id %><br />
+    <%= f.text_field :id %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :active %><br />
+    <%= f.check_box :active %>
+  </div>
+  <div class="field">
+    <%= f.label :referred %><br />
+    <%= f.text_field :referred %>
+  </div>
+  <div class="field">
+    <%= f.label :creation_date %><br />
+    <%= f.date_select :creation_date %>
+  </div>
+  <div class="field">
+    <%= f.label :paying %><br />
+    <%= f.check_box :paying %>
+  </div>
+  <div class="field">
+    <%= f.label :subscription_rate %><br />
+    <%= f.text_field :subscription_rate %>
+  </div>
+  <div class="field">
+    <%= f.label :subscription_ends %><br />
+    <%= f.date_select :subscription_ends %>
+  </div>
+  <div class="field">
+    <%= f.label :discount_rate %><br />
+    <%= f.text_field :discount_rate %>
+  </div>
+  <div class="field">
+    <%= f.label :discount_ends %><br />
+    <%= f.date_select :discount_ends %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

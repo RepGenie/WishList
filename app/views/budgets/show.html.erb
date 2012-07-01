@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Id:</b>
+  <%= @budget.id %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @budget.user_id %>
+</p>
+
+<p>
+  <b>For:</b>
+  <%= @budget.for_id %>
+</p>
+
+<p>
+  <b>Amount:</b>
+  <%= @budget.amount %>
+</p>
+
+
+<%= link_to 'Edit', edit_budget_path(@budget) %> |
+<%= link_to 'Back', budgets_path %>

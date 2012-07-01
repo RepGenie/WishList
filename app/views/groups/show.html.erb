@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Id:</b>
+  <%= @group.id %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @group.name %>
+</p>
+
+<p>
+  <b>Active:</b>
+  <%= @group.active %>
+</p>
+
+<p>
+  <b>Referred:</b>
+  <%= @group.referred %>
+</p>
+
+<p>
+  <b>Creation date:</b>
+  <%= @group.creation_date %>
+</p>
+
+<p>
+  <b>Paying:</b>
+  <%= @group.paying %>
+</p>
+
+<p>
+  <b>Subscription rate:</b>
+  <%= @group.subscription_rate %>
+</p>
+
+<p>
+  <b>Subscription ends:</b>
+  <%= @group.subscription_ends %>
+</p>
+
+<p>
+  <b>Discount rate:</b>
+  <%= @group.discount_rate %>
+</p>
+
+<p>
+  <b>Discount ends:</b>
+  <%= @group.discount_ends %>
+</p>
+
+
+<%= link_to 'Edit', edit_group_path(@group) %> |
+<%= link_to 'Back', groups_path %>
