@@ -1,12 +1,11 @@
 # == Schema Information
-# Schema version: 20120707185223
+# Schema version: 20120707223820
 #
 # Table name: subscriptions
 #
 #  id                :integer         not null, primary key
 #  user_id           :integer
 #  referred_by       :integer
-#  original_date     :date
 #  rate              :decimal(, )
 #  discount_rate     :decimal(, )
 #  discount_ends     :date

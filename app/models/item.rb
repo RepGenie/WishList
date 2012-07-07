@@ -1,5 +1,5 @@
 # == Schema Information
-# Schema version: 20120707185223
+# Schema version: 20120707224046
 #
 # Table name: items
 #
@@ -11,7 +11,6 @@
 #  item        :string(255)
 #  artist      :string(255)
 #  note        :string(255)
-#  added_date  :date
 #  active      :boolean
 #  buyer       :integer
 #  buy_date    :date
@@ -31,4 +30,6 @@ class Item < ActiveRecord::Base
 	validates :category_id, :presence => true
 	
 	belongs_to :user
+	has_one :category
+	has_one :priority
 end

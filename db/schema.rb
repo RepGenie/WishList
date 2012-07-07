@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120707185223) do
+ActiveRecord::Schema.define(:version => 20120707224046) do
 
   create_table "categories", :force => true do |t|
     t.string   "category"
@@ -40,7 +40,6 @@ ActiveRecord::Schema.define(:version => 20120707185223) do
     t.string   "item"
     t.string   "artist"
     t.string   "note"
-    t.date     "added_date"
     t.boolean  "active"
     t.integer  "buyer"
     t.date     "buy_date"
@@ -57,7 +56,6 @@ ActiveRecord::Schema.define(:version => 20120707185223) do
     t.integer  "user_id"
     t.integer  "to_user"
     t.text     "message"
-    t.date     "create_date"
     t.boolean  "active"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -87,7 +85,6 @@ ActiveRecord::Schema.define(:version => 20120707185223) do
   create_table "subscriptions", :force => true do |t|
     t.integer  "user_id"
     t.integer  "referred_by"
-    t.date     "original_date"
     t.decimal  "rate"
     t.decimal  "discount_rate"
     t.date     "discount_ends"

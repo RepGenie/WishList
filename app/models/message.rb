@@ -1,16 +1,15 @@
 # == Schema Information
-# Schema version: 20120707185223
+# Schema version: 20120707224046
 #
 # Table name: messages
 #
-#  id          :integer         not null, primary key
-#  user_id     :integer
-#  to_user     :integer
-#  message     :text
-#  create_date :date
-#  active      :boolean
-#  created_at  :datetime
-#  updated_at  :datetime
+#  id         :integer         not null, primary key
+#  user_id    :integer
+#  to_user    :integer
+#  message    :text
+#  active     :boolean
+#  created_at :datetime
+#  updated_at :datetime
 #
 
 class Message < ActiveRecord::Base
