@@ -25,5 +25,10 @@
 #
 
 class Item < ActiveRecord::Base
+	validates :item, :presence => true
+	validates :user_id, :presence => true
+	validates :priority_id, :presence => true
+	validates :category_id, :presence => true
+	
 	belongs_to :user
 end

@@ -12,6 +12,8 @@
 #
 
 class User < ActiveRecord::Base
+	validates :email, :presence => true
+	
 	has_one :profile
 	has_one :subscription
 	has_many :items

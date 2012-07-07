@@ -14,5 +14,9 @@
 #
 
 class Message < ActiveRecord::Base
+	validates :user_id, :presence => true
+	validates :to_user, :presence => true
+	validates :message, :presence => true
+	
 	belongs_to :user
 end
