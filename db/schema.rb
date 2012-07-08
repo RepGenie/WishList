@@ -10,7 +10,27 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120707224046) do
+ActiveRecord::Schema.define(:version => 20120708204803) do
+
+  create_table "budgetlines", :force => true do |t|
+    t.integer  "budget_id"
+    t.integer  "for_user"
+    t.decimal  "budget_amount"
+    t.decimal  "actual_amount"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "budgets", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "name"
+  end
+
+  create_table "budgets_users", :id => false, :force => true do |t|
+    t.integer "budget_id"
+    t.integer "user_id"
+  end
 
   create_table "categories", :force => true do |t|
     t.string   "category"

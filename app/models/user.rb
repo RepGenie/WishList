@@ -18,4 +18,5 @@ class User < ActiveRecord::Base
 	has_one :subscription
 	has_many :items
 	has_many :messages
+	has_and_belongs_to_many :budgets
 end
