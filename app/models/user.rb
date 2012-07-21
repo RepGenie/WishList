@@ -12,7 +12,11 @@
 #
 
 class User < ActiveRecord::Base
-	validates :email, :presence => true
+	validates :email, :presence => true,
+	                  :uniqueness => true,
+	                  :length => { :within => 9..50 },
+	                  :format => { :with => /^[^@][\w.-]+@[\w.-]+[.][a-z]{2,4}$/i }
+	validates :password, :confirmation => true
 	
 	has_one :profile
 	has_one :subscription

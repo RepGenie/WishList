@@ -2,7 +2,7 @@ class CreateMessages < ActiveRecord::Migration
   def self.up
     create_table :messages do |t|
       t.integer :user_id
-      t.integer :to_user
+      t.integer :for_user
       t.text :message
       t.date :create_date
       t.boolean :active

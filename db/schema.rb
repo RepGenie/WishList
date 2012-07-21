@@ -74,7 +74,7 @@ ActiveRecord::Schema.define(:version => 20120708204803) do
 
   create_table "messages", :force => true do |t|
     t.integer  "user_id"
-    t.integer  "to_user"
+    t.integer  "for_user"
     t.text     "message"
     t.boolean  "active"
     t.datetime "created_at"
