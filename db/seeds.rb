@@ -66,3 +66,23 @@ category.formats.create [{:format => 'XBox 360'},
                          {:format => 'PSP'},
                          {:format => 'Other'}]
                          
+
+# ******************************************************************
+# Seeds below this point are for development only
+# Remove these lines in the production version of the application
+# ******************************************************************
+user1 = User.create :email => "clayyearsley@yahoo.com",
+				    :password => "password",
+				    :password_confirmation => "password"
+				    
+user2 = User.create :email => "you@abc.com",
+					:password => "secret",
+					:password_confirmation => "secret"
+					
+user1.messages.create :for_user => 2,
+					  :active => true,
+					  :message => "Hey, you!"
+					  
+user2.messages.create :for_user => 1,
+					  :active => true,
+					  :message => "Yes, master"
