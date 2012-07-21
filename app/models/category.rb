@@ -13,5 +13,5 @@ class Category < ActiveRecord::Base
 	has_many :formats
 	belongs_to :item
 	
-	default_scope order('categories.category')
+ 	default_scope order('categories.category')
 end

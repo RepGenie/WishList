@@ -5,3 +5,64 @@
 #
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Mayor.create(:name => 'Daley', :city => cities.first)
+
+Priority.create [{:priority => 'Highest'},
+                 {:priority => 'High'},
+                 {:priority => 'Medium'},
+                 {:priority => 'Low'},
+                 {:priority => 'Lowest'}]
+                 
+Category.create [{:category => 'Books'},
+                 {:category => 'Music'},
+                 {:category => 'Clothing'},
+                 {:category => 'Videos and Movies'},
+                 {:category => 'Computer Software'},
+                 {:category => 'Electronics'},
+                 {:category => 'Fashion Accessories'},
+                 {:category => 'Games'},
+                 {:category => 'Gift Certificates'},
+                 {:category => 'Shoes'},
+                 {:category => 'Tools'},
+                 {:category => 'Toys'},
+                 {:category => 'Video Games'},
+                 {:category => 'Sporting Goods'},
+                 {:category => 'Makeup'},
+                 {:category => 'Perfume or Cologne'},
+                 {:category => 'Kitchenware and Appliances'},
+                 {:category => 'Food and Drink'},
+                 {:category => 'Office Products'},
+                 {:category => 'Tickets'},
+                 {:category => 'Musical Instruments'},
+                 {:category => 'Pet Supplies'},
+                 {:category => 'Housewares'},
+                 {:category => 'Jewelry and Watches'},
+                 {:category => 'Subscriptions'}]
+    
+category = Category.find_by_category('Books')
+category.formats.create [{:format => 'Hardback'},
+                         {:format => 'Paperback'},
+                         {:format => 'Kindle'},
+                         {:format => 'Nook'},
+                         {:format => 'Other'}]
+                         
+category = Category.find_by_category('Music')
+category.formats.create [{:format => 'CD'},
+                         {:format => 'iTunes'},
+                         {:format => 'MP3'},
+                         {:format => 'Other'}]
+                         
+category = Category.find_by_category('Videos and Movies')
+category.formats.create [{:format => 'DVD'},
+                         {:format => 'BluRay'},
+                         {:format => 'Other'}]
+                         
+category = Category.find_by_category('Video Games')
+category.formats.create [{:format => 'XBox 360'},
+                         {:format => 'Wii'},
+                         {:format => 'PS3'},
+                         {:format => 'Windows PC'},
+                         {:format => 'Mac'},
+                         {:format => 'Nintendo DS'},
+                         {:format => 'PSP'},
+                         {:format => 'Other'}]
+                         

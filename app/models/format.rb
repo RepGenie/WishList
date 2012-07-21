@@ -12,4 +12,6 @@
 
 class Format < ActiveRecord::Base
 	belongs_to :category
+	
+ 	default_scope order('formats.format')
 end
