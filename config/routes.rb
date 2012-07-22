@@ -1,17 +1,12 @@
 WishList::Application.routes.draw do
-  resources :faqs
-
-  resources :groups
-
-  resources :budgets
-
-  resources :items
-
-  resources :users
-
-  resources :priorities
-
-  resources :categories
+	root :to => "categories#index"
+	resources :faqs
+  	resources :budgets
+  	resources :items
+  	resources :users
+  	resources :priorities
+  	resources :categories
+  	resources :messages
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
