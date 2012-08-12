@@ -1,12 +1,15 @@
 WishList::Application.routes.draw do
 	root :to => "categories#index"
 	resources :faqs
-  	resources :budgets
-  	resources :items
-  	resources :users
-  	resources :priorities
-  	resources :categories
-  	resources :messages
+	resources :budgets
+	resources :items
+	resources :users
+	resources :priorities
+	resources :categories
+	resources :messages
+	resource :session
+	match '/login' => "sessions#new", :as => "login"
+	match '/logout' => "sessions#destroy", :as => "logout"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

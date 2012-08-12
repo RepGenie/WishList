@@ -1,4 +1,6 @@
 class ItemsController < ApplicationController
+	before_filter :authenticate
+	
   # GET /items
   # GET /items.xml
   def index
