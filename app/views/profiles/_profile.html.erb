@@ -1,0 +1,11 @@
+<%= div_for profile do %>
+	<h3>
+		<%= profile.full_name %>
+		<span class='actions'>
+			<%= link_to 'Edit', user_profile_path(:user_id => @user, :id => profile), :method => :edit %> |
+			<%= link_to 'Delete', [@user, profile], :confirm => 'Are you sure?', :method => :delete %>
+		</span>
+	</h3>
+	<%= content_tag :p, profile.first_name %>
+	<%= content_tag :p, profile.last_name %>
+<% end %>

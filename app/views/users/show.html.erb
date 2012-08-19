@@ -1,5 +1,8 @@
-<p id="notice"><%= notice %></p>
+<%= render @user %>
 
+<h3>Profile</h3>
+<div id="profiles">
+	<%= render @user.profile if @user.profile %>
+</div>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<%= render :file => 'profiles/new' %>
